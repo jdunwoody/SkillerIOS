@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AF8025015281CC1007A9766 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8024F15281CC1007A9766 /* UIKit.framework */; };
+		1AF8025215281CC1007A9766 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025115281CC1007A9766 /* Foundation.framework */; };
+		1AF8025415281CC1007A9766 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025315281CC1007A9766 /* CoreGraphics.framework */; };
+		1AF8025A15281CC1007A9766 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8025815281CC1007A9766 /* InfoPlist.strings */; };
+		1AF8025C15281CC1007A9766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8025B15281CC1007A9766 /* main.m */; };
+		1AF8026015281CC1007A9766 /* BirdsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8025F15281CC1007A9766 /* BirdsAppDelegate.m */; };
+		1AF8026315281CC1007A9766 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8026115281CC1007A9766 /* MainStoryboard.storyboard */; };
+		1AF8026615281CC1007A9766 /* BirdsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8026515281CC1007A9766 /* BirdsMasterViewController.m */; };
+		1AF8026915281CC1007A9766 /* BirdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8026815281CC1007A9766 /* BirdsDetailViewController.m */; };
+		1AF8027115281E9D007A9766 /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8027015281E9D007A9766 /* BirdSighting.m */; };
+		1AF8027A15286B80007A9766 /* BirdSightingDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8027915286B80007A9766 /* BirdSightingDataController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AF8024B15281CC1007A9766 /* Skiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF8024F15281CC1007A9766 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1AF8025115281CC1007A9766 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AF8025315281CC1007A9766 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1AF8025715281CC1007A9766 /* Skiller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Skiller-Info.plist"; sourceTree = "<group>"; };
+		1AF8025915281CC1007A9766 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AF8025B15281CC1007A9766 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AF8025D15281CC1007A9766 /* Skiller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Skiller-Prefix.pch"; sourceTree = "<group>"; };
+		1AF8025E15281CC1007A9766 /* BirdsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsAppDelegate.h; sourceTree = "<group>"; };
+		1AF8025F15281CC1007A9766 /* BirdsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsAppDelegate.m; sourceTree = "<group>"; };
+		1AF8026215281CC1007A9766 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1AF8026415281CC1007A9766 /* BirdsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsMasterViewController.h; sourceTree = "<group>"; };
+		1AF8026515281CC1007A9766 /* BirdsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsMasterViewController.m; sourceTree = "<group>"; };
+		1AF8026715281CC1007A9766 /* BirdsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdsDetailViewController.h; sourceTree = "<group>"; };
+		1AF8026815281CC1007A9766 /* BirdsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsDetailViewController.m; sourceTree = "<group>"; };
+		1AF8026F15281E9D007A9766 /* BirdSighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSighting.h; sourceTree = "<group>"; };
+		1AF8027015281E9D007A9766 /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
+		1AF8027815286B80007A9766 /* BirdSightingDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSightingDataController.h; sourceTree = "<group>"; };
+		1AF8027915286B80007A9766 /* BirdSightingDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSightingDataController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AF8024815281CC1007A9766 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF8025015281CC1007A9766 /* UIKit.framework in Frameworks */,
+				1AF8025215281CC1007A9766 /* Foundation.framework in Frameworks */,
+				1AF8025415281CC1007A9766 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AF8024015281CC1007A9766 = {
+			isa = PBXGroup;
+			children = (
+				1AF8025515281CC1007A9766 /* Birdwatching */,
+				1AF8024E15281CC1007A9766 /* Frameworks */,
+				1AF8024C15281CC1007A9766 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AF8024C15281CC1007A9766 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8024B15281CC1007A9766 /* Skiller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AF8024E15281CC1007A9766 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8024F15281CC1007A9766 /* UIKit.framework */,
+				1AF8025115281CC1007A9766 /* Foundation.framework */,
+				1AF8025315281CC1007A9766 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AF8025515281CC1007A9766 /* Birdwatching */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8025E15281CC1007A9766 /* BirdsAppDelegate.h */,
+				1AF8025F15281CC1007A9766 /* BirdsAppDelegate.m */,
+				1AF8026115281CC1007A9766 /* MainStoryboard.storyboard */,
+				1AF8026415281CC1007A9766 /* BirdsMasterViewController.h */,
+				1AF8026515281CC1007A9766 /* BirdsMasterViewController.m */,
+				1AF8026715281CC1007A9766 /* BirdsDetailViewController.h */,
+				1AF8026815281CC1007A9766 /* BirdsDetailViewController.m */,
+				1AF8025615281CC1007A9766 /* Supporting Files */,
+				1AF8026F15281E9D007A9766 /* BirdSighting.h */,
+				1AF8027015281E9D007A9766 /* BirdSighting.m */,
+				1AF8027815286B80007A9766 /* BirdSightingDataController.h */,
+				1AF8027915286B80007A9766 /* BirdSightingDataController.m */,
+			);
+			path = Birdwatching;
+			sourceTree = "<group>";
+		};
+		1AF8025615281CC1007A9766 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8025715281CC1007A9766 /* Skiller-Info.plist */,
+				1AF8025815281CC1007A9766 /* InfoPlist.strings */,
+				1AF8025B15281CC1007A9766 /* main.m */,
+				1AF8025D15281CC1007A9766 /* Skiller-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AF8024A15281CC1007A9766 /* Skiller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AF8026C15281CC1007A9766 /* Build configuration list for PBXNativeTarget "Skiller" */;
+			buildPhases = (
+				1AF8024715281CC1007A9766 /* Sources */,
+				1AF8024815281CC1007A9766 /* Frameworks */,
+				1AF8024915281CC1007A9766 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skiller;
+			productName = Birdwatching;
+			productReference = 1AF8024B15281CC1007A9766 /* Skiller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AF8024215281CC1007A9766 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Birds;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1AF8024515281CC1007A9766 /* Build configuration list for PBXProject "Skiller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AF8024015281CC1007A9766;
+			productRefGroup = 1AF8024C15281CC1007A9766 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AF8024A15281CC1007A9766 /* Skiller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AF8024915281CC1007A9766 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF8025A15281CC1007A9766 /* InfoPlist.strings in Resources */,
+				1AF8026315281CC1007A9766 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AF8024715281CC1007A9766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AF8025C15281CC1007A9766 /* main.m in Sources */,
+				1AF8026015281CC1007A9766 /* BirdsAppDelegate.m in Sources */,
+				1AF8026615281CC1007A9766 /* BirdsMasterViewController.m in Sources */,
+				1AF8026915281CC1007A9766 /* BirdsDetailViewController.m in Sources */,
+				1AF8027115281E9D007A9766 /* BirdSighting.m in Sources */,
+				1AF8027A15286B80007A9766 /* BirdSightingDataController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AF8025815281CC1007A9766 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AF8025915281CC1007A9766 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AF8026115281CC1007A9766 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AF8026215281CC1007A9766 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AF8026A15281CC1007A9766 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1AF8026B15281CC1007A9766 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AF8026D15281CC1007A9766 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Birdwatching/Skiller-Prefix.pch";
+				INFOPLIST_FILE = "Birdwatching/Skiller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = Skiller;
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AF8026E15281CC1007A9766 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Birdwatching/Skiller-Prefix.pch";
+				INFOPLIST_FILE = "Birdwatching/Skiller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = Skiller;
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AF8024515281CC1007A9766 /* Build configuration list for PBXProject "Skiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AF8026A15281CC1007A9766 /* Debug */,
+				1AF8026B15281CC1007A9766 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AF8026C15281CC1007A9766 /* Build configuration list for PBXNativeTarget "Skiller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AF8026D15281CC1007A9766 /* Debug */,
+				1AF8026E15281CC1007A9766 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AF8024215281CC1007A9766 /* Project object */;
+}
