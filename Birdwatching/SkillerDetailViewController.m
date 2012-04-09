@@ -12,7 +12,7 @@
 
 @implementation SkillerDetailViewController
 
-@synthesize sighting = _sighting, birdNameLabel = _birdNameLabel, locationLabel = _locationLabel, dateLabel = _dateLabel;
+@synthesize sighting = _sighting, nameLabel = _nameLabel, scoreLabel = _scoreLabel, dateLabel = _dateLabel;
 
 #pragma mark - Managing the detail item
 
@@ -37,8 +37,8 @@
     }
          
     if (theSighting) {
-        self.birdNameLabel.text = theSighting.name;
-        self.locationLabel.text = theSighting.location;
+        self.nameLabel.text = theSighting.name;
+        self.scoreLabel.text = theSighting.score;
         self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSighting.date];
     }
 }

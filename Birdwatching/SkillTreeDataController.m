@@ -12,7 +12,7 @@
 
 @implementation SkillTreeDataController
 
-@synthesize masterBirdSightingList = _masterBirdSightingList;
+@synthesize masterSkillTreeList = _masterSkillTreeList;
 
 - (id)init {
     if (self = [super init]) {
@@ -24,28 +24,28 @@
 }
 
 - (void)initializeDefaultDataList {
-    NSMutableArray *sightedList = [[NSMutableArray alloc] init];
-    self.masterBirdSightingList = sightedList;
-    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere"];
+    NSMutableArray *skillTreeList = [[NSMutableArray alloc] init];
+    self.masterSkillTreeList = skillTreeList;
+    [self addSkillTreeWithName:@"Programming" score:@"1"];
 }
 
-- (void)setMasterBirdSightingList:(NSMutableArray *)newList {
-    if(_masterBirdSightingList != newList) {
-        _masterBirdSightingList = [newList mutableCopy];
+- (void)setMasterSkillTreeList:(NSMutableArray *)newList {
+    if(_masterSkillTreeList != newList) {
+        _masterSkillTreeList = [newList mutableCopy];
     }
 }
  
 - (NSUInteger)countOfList {
-    return [self.masterBirdSightingList count];
+    return [self.masterSkillTreeList count];
 }
 
 - (SkillTree *)objectInListAtIndex:(NSUInteger)theIndex {
-    return [self.masterBirdSightingList objectAtIndex:theIndex];
+    return [self.masterSkillTreeList objectAtIndex:theIndex];
 }
 
-- (void)addBirdSightingWithName:(NSString *)inputBirdName location:(NSString *)inputLocation {
+- (void)addSkillTreeWithName:(NSString *)inputName score:(NSString *)inputScore {
     NSDate *today = [NSDate date];
-    SkillTree *sighting = [[SkillTree alloc] initWithName:inputBirdName location:inputLocation date:today];
-    [self.masterBirdSightingList addObject:sighting];
+    SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
+    [self.masterSkillTreeList addObject:skillTree];
 }
 @end

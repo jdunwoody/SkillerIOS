@@ -9,8 +9,8 @@
 @interface SkillerDetailViewController : UITableViewController
 
 @property (strong, nonatomic) SkillTree *sighting;
-@property (weak, nonatomic) IBOutlet UILabel *birdNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end

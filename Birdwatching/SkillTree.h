@@ -8,8 +8,8 @@
 @interface SkillTree : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *location;
+@property (nonatomic, copy) NSString *score;
 @property (nonatomic, copy) NSDate *date;
 
-- (id)initWithName: (NSString *)name location:(NSString *)location date:(NSDate *)date;
+- (id)initWithName: (NSString *)name score:(NSString *)score date:(NSDate *)date;
 @end

@@ -9,11 +9,11 @@
 
 @interface SkillTreeDataController : NSObject
 
-@property (nonatomic, copy) NSMutableArray *masterBirdSightingList;
+@property (nonatomic, copy) NSMutableArray *masterSkillTreeList;
 
 -(NSUInteger) countOfList;
 
--(void)addBirdSightingWithName:(NSString *)inputBirdName location:(NSString *)inputLocation;
+-(void)addSkillTreeWithName:(NSString *)inputName score:(NSString *)inputScore;
 
 -(SkillTree *)objectInListAtIndex:(NSUInteger)theIndex;
 

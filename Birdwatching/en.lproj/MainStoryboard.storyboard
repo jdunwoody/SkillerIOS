@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bird Sightings" id="36"/>
+                    <navigationItem key="navigationItem" title="Skill Trees" id="36"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
@@ -91,7 +91,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bird Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="H56-cS-5cq">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="H56-cS-5cq">
                                                     <rect key="frame" x="33" y="11" width="119" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -116,7 +116,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CGi-z2-LBd">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CGi-z2-LBd">
                                                     <rect key="frame" x="33" y="11" width="119" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -169,15 +169,28 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="wwk-P1-O10"/>
                     <connections>
-                        <outlet property="birdNameLabel" destination="hLX-bI-E6j" id="235-td-vTN"/>
-                        <outlet property="dateLabel" destination="WBJ-Am-ed2" id="Agy-kx-Cp6"/>
-                        <outlet property="locationLabel" destination="mzV-2Q-AeN" id="ZrV-tl-SnL"/>
+                        <outlet property="dateLabel" destination="WBJ-Am-ed2" id="1zd-zo-sTY"/>
+                        <outlet property="nameLabel" destination="hLX-bI-E6j" id="RP9-b4-UgG"/>
+                        <outlet property="scoreLabel" destination="mzV-2Q-AeN" id="c4R-LA-7rq"/>
                     </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="905" y="64"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="SkillerDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillerDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SkillerMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillerMasterViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
