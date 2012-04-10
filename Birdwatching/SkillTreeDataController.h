@@ -13,7 +13,7 @@
 
 -(NSUInteger) countOfList;
 
--(void)addSkillTreeWithName:(NSString *)inputName score:(NSString *)inputScore;
+-(void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore;
 
 -(SkillTree *)objectInListAtIndex:(NSUInteger)theIndex;
 

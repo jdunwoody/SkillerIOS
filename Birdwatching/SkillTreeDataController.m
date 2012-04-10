@@ -48,7 +48,7 @@
     return [self.masterSkillTreeList objectAtIndex:theIndex];
 }
 
-- (void)addSkillTreeWithName:(NSString *)inputName score:(NSString *)inputScore {
+- (void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore {
     NSDate *today = [NSDate date];
     SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
     [self.masterSkillTreeList addObject:skillTree];
