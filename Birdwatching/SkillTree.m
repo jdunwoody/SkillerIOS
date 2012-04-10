@@ -10,7 +10,7 @@
 @synthesize score = _score;
 @synthesize date = _date;
 
--(id) initWithName:(NSString *)name score:(NSString *)score date:(NSDate *)date {
+-(id) initWithName:(NSString *)name score:(NSNumber *)score date:(NSDate *)date {
     self = [super init];
     if (self) {
         _name = name;

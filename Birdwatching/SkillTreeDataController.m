@@ -71,7 +71,7 @@
     
     for (id skillTreeJson in json) {
         NSString *name = [skillTreeJson objectForKey:@"name"];
-        NSString *score = [skillTreeJson objectForKey:@"score"];
+        NSNumber *score = [skillTreeJson objectForKey:@"score"];
         NSDate *date = [skillTreeJson objectForKey:@"updated_at"];
     
         SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];

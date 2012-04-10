@@ -21,7 +21,6 @@
     if (_sighting != newSighting) {
         _sighting = newSighting;
         
-        // Update the view.
         [self configureView];
     }
 }
@@ -38,7 +37,7 @@
          
     if (theSighting) {
         self.nameLabel.text = theSighting.name;
-        self.scoreLabel.text = theSighting.score;
+        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSighting.score intValue]];
         self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSighting.date];
     }
 }
