@@ -26,8 +26,13 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *skillTreeList = [[NSMutableArray alloc] init];
     self.masterSkillTreeList = skillTreeList;
-    [self addSkillTreeWithName:@"Programming" score:@"1"];
-}
+    
+    NSArray *skillTrees = [self getJsonFromServer];
+    
+    for (id skillTree in skillTrees) {
+        [self addSkillTreeWithName:[skillTree name] score:[skillTree score]];
+    }
+ }
 
 - (void)setMasterSkillTreeList:(NSMutableArray *)newList {
     if(_masterSkillTreeList != newList) {
@@ -48,4 +53,33 @@
     SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
     [self.masterSkillTreeList addObject:skillTree];
 }
+
+#define url [NSURL URLWithString: @"http://glowing-sunset-9969.herokuapp.com/skill_trees/everything.json"] 
+
+- (NSArray *)getJsonFromServer {
+    NSMutableArray *skillTrees = [[NSMutableArray alloc] init];
+    
+    NSError* error;
+   
+    NSData* data = [NSData dataWithContentsOfURL:url];
+    
+    NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!json) {
+        NSLog(@"Error = %@", error);
+        return skillTrees;
+    }
+    
+    for (id skillTreeJson in json) {
+        NSString *name = [skillTreeJson objectForKey:@"name"];
+        NSString *score = [skillTreeJson objectForKey:@"score"];
+        NSDate *date = [skillTreeJson objectForKey:@"updated_at"];
+    
+        SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];
+
+        [skillTrees addObject:skillTree];
+    }   
+    
+    return skillTrees;    
+}
+
 @end
