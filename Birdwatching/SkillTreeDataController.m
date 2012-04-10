@@ -75,8 +75,18 @@
         NSDate *date = [skillTreeJson objectForKey:@"updated_at"];
     
         SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];
-
         [skillTrees addObject:skillTree];
+
+        for (id levelJson in [skillTreeJson objectForKey:@"levels"]) {
+            Level *level = [[Level alloc] initWithName:[levelJson objectForKey:@"name"] score:[levelJson objectForKey:@"score"]];
+            [[skillTree levels] addObject:level];
+            
+            for (id taskJson in [levelJson objectForKey:@"tasks"]) {
+                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:[taskJson objectForKey:@"status"]];
+                [[level tasks] addObject:task];
+                
+            }
+        }
     }   
     
     return skillTrees;    

@@ -4,11 +4,13 @@
 //
 
 #import "SkillTree.h"
+#import "level.h"
 
 @implementation SkillTree
 @synthesize name = _name;
 @synthesize score = _score;
 @synthesize date = _date;
+@synthesize levels = _levels;
 
 -(id) initWithName:(NSString *)name score:(NSNumber *)score date:(NSDate *)date {
     self = [super init];
@@ -20,4 +22,5 @@
     }
     return self;
 }
+
 @end

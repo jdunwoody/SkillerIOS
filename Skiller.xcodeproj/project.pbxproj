@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ABB0E8115345E440048034E /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABB0E8015345E440048034E /* Level.m */; };
+		1ABB0E8515345F140048034E /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABB0E8415345F140048034E /* Task.m */; };
 		1AF8025015281CC1007A9766 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8024F15281CC1007A9766 /* UIKit.framework */; };
 		1AF8025215281CC1007A9766 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025115281CC1007A9766 /* Foundation.framework */; };
 		1AF8025415281CC1007A9766 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025315281CC1007A9766 /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ABB0E7F15345E440048034E /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		1ABB0E8015345E440048034E /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		1ABB0E8315345F140048034E /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		1ABB0E8415345F140048034E /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		1AF8024B15281CC1007A9766 /* Skiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF8024F15281CC1007A9766 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AF8025115281CC1007A9766 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +104,10 @@
 				1AF8027015281E9D007A9766 /* SkillTree.m */,
 				1AF8027815286B80007A9766 /* SkillTreeDataController.h */,
 				1AF8027915286B80007A9766 /* SkillTreeDataController.m */,
+				1ABB0E7F15345E440048034E /* Level.h */,
+				1ABB0E8015345E440048034E /* Level.m */,
+				1ABB0E8315345F140048034E /* Task.h */,
+				1ABB0E8415345F140048034E /* Task.m */,
 			);
 			path = Birdwatching;
 			sourceTree = "<group>";
@@ -182,6 +192,8 @@
 				1AF8026915281CC1007A9766 /* SkillerDetailViewController.m in Sources */,
 				1AF8027115281E9D007A9766 /* SkillTree.m in Sources */,
 				1AF8027A15286B80007A9766 /* SkillTreeDataController.m in Sources */,
+				1ABB0E8115345E440048034E /* Level.m in Sources */,
+				1ABB0E8515345F140048034E /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
