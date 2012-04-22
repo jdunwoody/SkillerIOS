@@ -68,7 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier =@"SkillerCell";
+    static NSString *CellIdentifier = @"SkillerCell";
     static NSDateFormatter *formatter = nil;
     
     if (formatter == nil) {
@@ -78,9 +78,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    SkillTree *sightingAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-    [[cell textLabel] setText:sightingAtIndex.name];
-    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) sightingAtIndex.date]];
+    SkillTree *skillTreeAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    [[cell textLabel] setText:skillTreeAtIndex.name];
+    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) skillTreeAtIndex.date]];
     return cell;
 }
 
@@ -122,7 +122,7 @@
     if ([[segue identifier] isEqualToString:@"ShowSkillTreeDetails"]) {
         SkillerDetailViewController *detailViewController = [segue destinationViewController];
         
-        detailViewController.sighting = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        detailViewController.skillTree = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
 

@@ -12,14 +12,14 @@
 
 @implementation SkillerDetailViewController
 
-@synthesize sighting = _sighting, nameLabel = _nameLabel, scoreLabel = _scoreLabel, dateLabel = _dateLabel;
+@synthesize skillTree = _skillTree, nameLabel = _nameLabel, scoreLabel = _scoreLabel, dateLabel = _dateLabel;
 
 #pragma mark - Managing the detail item
 
-- (void)setSighting:(SkillTree *)newSighting
+- (void)setSighting:(SkillTree *)newSkillTree
 {
-    if (_sighting != newSighting) {
-        _sighting = newSighting;
+    if (_skillTree != newSkillTree) {
+        _skillTree = newSkillTree;
         
         [self configureView];
     }
@@ -27,7 +27,7 @@
 
 - (void)configureView
 {
-    SkillTree *theSighting = self.sighting;
+    SkillTree *theSkillTree = self.skillTree;
 
     static NSDateFormatter *formatter = nil;
     if (formatter == nil) {
@@ -35,10 +35,10 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
          
-    if (theSighting) {
-        self.nameLabel.text = theSighting.name;
-        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSighting.score intValue]];
-        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSighting.date];
+    if (theSkillTree) {
+        self.nameLabel.text = theSkillTree.name;
+        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSkillTree.score intValue]];
+        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSkillTree.date];
     }
 }
 
