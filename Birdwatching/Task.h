@@ -11,8 +11,8 @@
 @interface Task : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
-@property (nonatomic, assign) BOOL status;
+@property (nonatomic, assign) NSString *status;
 
-- (id)initWithName: (NSString *)name description:(NSString *)description status:(BOOL) status;
+- (id)initWithName: (NSString *)name description:(NSString *)description status:(NSString *) status;
 
 @end

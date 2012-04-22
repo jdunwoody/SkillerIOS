@@ -82,7 +82,9 @@
             [[skillTree levels] addObject:level];
             
             for (id taskJson in [levelJson objectForKey:@"tasks"]) {
-                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:[taskJson objectForKey:@"status"]];
+                NSString *status = [taskJson objectForKey:@"status"];
+                
+                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:status];
                 [[level tasks] addObject:task];
                 
             }
