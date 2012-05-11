@@ -2,7 +2,7 @@
 
 @class SkillTree;
 
-@interface SkillTreeDataController : NSObject
+@interface TaskDataController : NSObject
 
 @property (nonatomic, copy) NSMutableArray *masterSkillTreeList;
 

@@ -1,11 +1,11 @@
-#import "SkillTreeDataController.h"
+#import "TaskDataController.h"
 #import "SkillTree.h"
 
-@interface SkillTreeDataController ()
+@interface TaskDataController ()
 - (void)initializeDefaultDataList;
 @end
 
-@implementation SkillTreeDataController
+@implementation TaskDataController
 
 @synthesize masterSkillTreeList = _masterSkillTreeList;
 
@@ -20,21 +20,20 @@
     NSMutableArray *skillTreeList = [[NSMutableArray alloc] init];
     self.masterSkillTreeList = skillTreeList;
 
-    
     // not in code listing
     NSArray *skillTrees = [self getJsonFromServer];
     
     for (id skillTree in skillTrees) {
         [self addSkillTreeWithName:[skillTree name] score:[skillTree score]];
     }
- }
+}
 
 - (void)setMasterSkillTreeList:(NSMutableArray *)newList {
     if(_masterSkillTreeList != newList) {
         _masterSkillTreeList = [newList mutableCopy];
     }
 }
- 
+
 - (NSUInteger)countOfList {
     return [self.masterSkillTreeList count];
 }
@@ -55,7 +54,7 @@
     NSMutableArray *skillTrees = [[NSMutableArray alloc] init];
     
     NSError* error;
-   
+    
     NSData* data = [NSData dataWithContentsOfURL:url];
     
     NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
@@ -68,10 +67,10 @@
         NSString *name = [skillTreeJson objectForKey:@"name"];
         NSNumber *score = [skillTreeJson objectForKey:@"score"];
         NSDate *date = [skillTreeJson objectForKey:@"updated_at"];
-    
+        
         SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];
         [skillTrees addObject:skillTree];
-
+        
         for (id levelJson in [skillTreeJson objectForKey:@"levels"]) {
             Level *level = [[Level alloc] initWithName:[levelJson objectForKey:@"name"] score:[levelJson objectForKey:@"score"]];
             [[skillTree levels] addObject:level];

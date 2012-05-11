@@ -6,6 +6,7 @@
 #import "SkillerAppDelegate.h"
 #import "SkillTreeDataController.h"
 #import "SkillerMasterViewController.h"
+#import "TaskDataController.h"
 
 @implementation SkillerAppDelegate
 
@@ -16,10 +17,14 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
     SkillerMasterViewController *firstViewController = (SkillerMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
-    
     SkillTreeDataController *aDataController = [[SkillTreeDataController alloc] init];
+
+
+//    SkillerDetailViewController *detailViewController = (SkillerDetailViewController *)[[navigationController viewControllers] objectAtIndex:1];
+//    TaskDataController *taskDataController = [[TaskDataController alloc] init];
     
     firstViewController.dataController = aDataController;
+//    detailViewController.dataController = taskDataController;
     
     return YES;
 }

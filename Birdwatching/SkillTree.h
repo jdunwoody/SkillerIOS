@@ -10,7 +10,7 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSNumber *score;
-@property (nonatomic, copy) NSDate *date;
+@property (nonatomic, strong) NSDate *date;
 @property (readwrite, retain) NSMutableArray *levels;
 
 - (id)initWithName: (NSString *)name score:(NSNumber *)score date:(NSDate *)date;
