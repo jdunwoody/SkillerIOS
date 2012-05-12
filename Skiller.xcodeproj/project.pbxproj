@@ -98,13 +98,15 @@
 		1AF8025515281CC1007A9766 /* Birdwatching */ = {
 			isa = PBXGroup;
 			children = (
-				1A42CAE5155D3B6B00FFAE85 /* SkillerDetailViewController.h */,
-				1A42CAE6155D3B6B00FFAE85 /* SkillerDetailViewController.m */,
 				1AF8025E15281CC1007A9766 /* SkillerAppDelegate.h */,
 				1AF8025F15281CC1007A9766 /* SkillerAppDelegate.m */,
 				1AF8026115281CC1007A9766 /* MainStoryboard.storyboard */,
 				1AF8026415281CC1007A9766 /* SkillerMasterViewController.h */,
 				1AF8026515281CC1007A9766 /* SkillerMasterViewController.m */,
+				1A42CAE5155D3B6B00FFAE85 /* SkillerDetailViewController.h */,
+				1A42CAE6155D3B6B00FFAE85 /* SkillerDetailViewController.m */,
+				1A54D45B1543B3C500337F52 /* TaskDetailViewController.h */,
+				1A54D45C1543B3C500337F52 /* TaskDetailViewController.m */,
 				1AF8025615281CC1007A9766 /* Supporting Files */,
 				1AF8026F15281E9D007A9766 /* SkillTree.h */,
 				1AF8027015281E9D007A9766 /* SkillTree.m */,
@@ -114,8 +116,6 @@
 				1ABB0E8015345E440048034E /* Level.m */,
 				1ABB0E8315345F140048034E /* Task.h */,
 				1ABB0E8415345F140048034E /* Task.m */,
-				1A54D45B1543B3C500337F52 /* TaskDetailViewController.h */,
-				1A54D45C1543B3C500337F52 /* TaskDetailViewController.m */,
 				1A54D45F1543D93C00337F52 /* TaskDataController.h */,
 				1A54D4601543D93C00337F52 /* TaskDataController.m */,
 			);

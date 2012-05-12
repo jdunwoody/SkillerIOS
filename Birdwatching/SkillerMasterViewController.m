@@ -115,31 +115,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"TasksForSkillTree"]) {
+    if ([[segue identifier] isEqualToString:@"ShowSkillTreeDetails"]) {
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
         NSDate *date = [dateFormatter dateFromString:@"2011-04-11"];
     
-        
-//        if ([[segue identifier] isEqualToString:@"relevantSegueIdentifier"])
-//        {
-//            // [segue destinationViewController] is read-only, so in order to
-//            // write to that view controller you'll have to locally instantiate
-//            // it here:
-//            ViewController *upcomingViewController = [segue destinationViewController];
-//            
-//            // You now have a solid reference to the upcoming / destination view
-//            // controller. Example use: Allocate and initialize some property of
-//            // the destination view controller before you reach it and inject a
-//            // reference to the current view controller into the upcoming one:
-//            upcomingViewController.someProperty = [[SomePropertyClass alloc] initWithString:@"Whatever!"];
-//            upcomingViewController.initialViewController = [segue sourceViewController];
-//            // Or, equivalent, but more straightforward:
-//            //upcomingViewController.initialViewController = self;
-//        }
-        
         TaskDetailViewController *taskDetailViewController = [segue destinationViewController];
         NSNumber *score = [NSNumber numberWithInt:2];
 //        SkillTree *st = [[SkillTree alloc] initWithName:@"name" score:score date:date];
@@ -148,8 +130,6 @@
         NSLog(@"SkillTree name: %@", st.name);
         
         taskDetailViewController.skillTree = [[SkillTree alloc]initWithName:@"name" score:score date:date];
-        taskDetailViewController.skillTree = nil;
-        taskDetailViewController.skillTree = st;
     }
 }
 

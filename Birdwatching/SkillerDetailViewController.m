@@ -12,7 +12,10 @@
 
 @implementation SkillerDetailViewController
 
-@synthesize skillTree = _skillTree, nameLabel = _nameLabel, scoreLabel = _scoreLabel, dateLabel = _dateLabel;
+@synthesize skillTree = _skillTree;
+@synthesize nameLabel = _nameLabel;
+@synthesize scoreLabel = _scoreLabel;
+@synthesize dateLabel = _dateLabel;
 
 #pragma mark - Managing the detail item
 

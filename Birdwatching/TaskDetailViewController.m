@@ -143,11 +143,8 @@
 {
     if ([[segue identifier] isEqualToString:@"ShowSkillTreeDetails"]) {
         TaskDetailViewController *taskDetailViewController = [segue destinationViewController];
-        
-        SkillTree *st = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
-        taskDetailViewController.skillTree = st;
-        st = NULL;
-        
+ 
+        taskDetailViewController.skillTree = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
 
