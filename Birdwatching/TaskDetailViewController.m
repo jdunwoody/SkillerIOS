@@ -17,26 +17,26 @@
     if (_skillTree != newSkillTree) {
         _skillTree = newSkillTree;
         
-        [self configureView];
+//        [self configureView];
     }
 }
 
-- (void)configureView
-{
-    SkillTree *theSkillTree = self.skillTree;
-    
-    static NSDateFormatter *formatter = nil;
-    if (formatter == nil) {
-        formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateStyle:NSDateFormatterMediumStyle];
-    }
-    
-    if (theSkillTree) {
-//        self.nameLabel.text = theSkillTree.name;
-//        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSkillTree.score intValue]];
-//        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSkillTree.date];
-    }
-}
+//- (void)configureView
+//{
+//    SkillTree *theSkillTree = self.skillTree;
+//    
+//    static NSDateFormatter *formatter = nil;
+//    if (formatter == nil) {
+//        formatter = [[NSDateFormatter alloc] init];
+//        [formatter setDateStyle:NSDateFormatterMediumStyle];
+//    }
+//    
+//    if (theSkillTree) {
+////        self.nameLabel.text = theSkillTree.name;
+////        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSkillTree.score intValue]];
+////        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSkillTree.date];
+//    }
+//}
 
 - (void)awakeFromNib
 {
@@ -99,11 +99,17 @@
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    SkillTree *skillTreeAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-    [[cell textLabel] setText:skillTreeAtIndex.name];
-    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) skillTreeAtIndex.date]];
+
+    NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+
+    [[cell textLabel] setText:valueAtIndex];
+//    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) _skillTree.date]];
     return cell;
+    
+//    SkillTree *skillTreeAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+//    [[cell textLabel] setText:skillTreeAtIndex.name];
+//    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) skillTreeAtIndex.date]];
+//    return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,13 +144,13 @@
  return YES;
  }
  */
-
+//
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowSkillTreeDetails"]) {
-        TaskDetailViewController *taskDetailViewController = [segue destinationViewController];
- 
-        taskDetailViewController.skillTree = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+    if ([[segue identifier] isEqualToString:@"BLAH"]) {
+//        TaskDetailViewController *taskDetailViewController = [segue destinationViewController];
+// 
+//        taskDetailViewController.skillTree = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
 

@@ -18,9 +18,18 @@
         _name = name;
         _date = date;
         _score = score;
+        _levels = [[NSMutableArray alloc]init];
         return self;
     }
     return self;
+}
+
+-(void) dump {
+    NSLog(@"SkillTree: %@", _name);
+    for (Level *level in _levels) {
+        [level dump];
+        
+    }
 }
 
 @end

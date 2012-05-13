@@ -19,13 +19,13 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *skillTreeList = [[NSMutableArray alloc] init];
     self.masterSkillTreeList = skillTreeList;
-
     
     // not in code listing
     NSArray *skillTrees = [self getJsonFromServer];
     
     for (id skillTree in skillTrees) {
-        [self addSkillTreeWithName:[skillTree name] score:[skillTree score]];
+        [self.masterSkillTreeList addObject:skillTree];
+//        [self addSkillTreeWithName:[skillTree name] score:[skillTree score]];
     }
  }
 
@@ -43,11 +43,11 @@
     return [self.masterSkillTreeList objectAtIndex:theIndex];
 }
 
-- (void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore {
-    NSDate *today = [NSDate date];
-    SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
-    [self.masterSkillTreeList addObject:skillTree];
-}
+//- (void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore {
+//    NSDate *today = [NSDate date];
+//    SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
+//    [self.masterSkillTreeList addObject:skillTree];
+//}
 
 #define url [NSURL URLWithString: @"http://glowing-sunset-9969.herokuapp.com/skill_trees/everything.json"] 
 // not in code listing
@@ -77,13 +77,15 @@
             [[skillTree levels] addObject:level];
             
             for (id taskJson in [levelJson objectForKey:@"tasks"]) {
-                NSString *status = [taskJson objectForKey:@"status"];
+//                NSString *status = [taskJson objectForKey:@"status"];
                 
-                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:status];
+                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:@"ok"];
                 [[level tasks] addObject:task];
                 
             }
         }
+        NSLog(@">>>>>>>>> Dumping in Skill Tree Data Controller getJson for %@", name);
+        [skillTree dump];
     }   
     
     return skillTrees;    

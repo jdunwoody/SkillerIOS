@@ -15,5 +15,5 @@
 @property (readwrite, retain) NSMutableArray *tasks;
 
 - (id)initWithName: (NSString *)name score:(NSNumber *)score;
-
+- (void)dump;
 @end

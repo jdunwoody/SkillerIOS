@@ -14,5 +14,5 @@
 @property (readwrite, retain) NSMutableArray *levels;
 
 - (id)initWithName: (NSString *)name score:(NSNumber *)score date:(NSDate *)date;
-
+- (void)dump;
 @end

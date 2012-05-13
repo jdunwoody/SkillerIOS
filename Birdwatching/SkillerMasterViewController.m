@@ -1,6 +1,7 @@
 #import "SkillerMasterViewController.h"
 #import "TaskDetailViewController.h"
 #import "SkillTreeDataController.h"
+#import "TaskDataController.h"
 #import "SkillTree.h"
 
 //@interface SkillerMasterViewController () {
@@ -75,6 +76,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     SkillTree *skillTreeAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    NSLog(@"Dumping in master view controller");
+    [skillTreeAtIndex dump];
     [[cell textLabel] setText:skillTreeAtIndex.name];
     [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) skillTreeAtIndex.date]];
     return cell;
@@ -115,21 +118,27 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ShowSkillTreeDetails"]) {
+    if ([[segue identifier] isEqualToString:@"ShowTasks"]) {
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-        NSDate *date = [dateFormatter dateFromString:@"2011-04-11"];
-    
+//        NSDate *date = [dateFormatter dateFromString:@"2011-04-11"];
+        
         TaskDetailViewController *taskDetailViewController = [segue destinationViewController];
-        NSNumber *score = [NSNumber numberWithInt:2];
+//        NSNumber *score = [NSNumber numberWithInt:2];
 //        SkillTree *st = [[SkillTree alloc] initWithName:@"name" score:score date:date];
-        SkillTree *st = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        SkillTree *skillTree = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        NSLog(@"Dumping in master view controller prepare for seque");
+        [skillTree dump];
+
+        taskDetailViewController.dataController = [[TaskDataController alloc]initWithSkillTree:skillTree];
+        taskDetailViewController.skillTree = skillTree;
         
-        NSLog(@"SkillTree name: %@", st.name);
-        
-        taskDetailViewController.skillTree = [[SkillTree alloc]initWithName:@"name" score:score date:date];
+//        NSLog(@"SkillTree name: %@", st.name);
+//        
+//        taskDetailViewController.skillTree = st;
+//        [[SkillTree alloc]initWithName:@"name" score:score date:date];
     }
 }
 

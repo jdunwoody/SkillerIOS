@@ -4,12 +4,13 @@
 
 @interface TaskDataController : NSObject
 
-@property (nonatomic, copy) NSMutableArray *masterSkillTreeList;
+@property (nonatomic, copy) NSMutableArray *valueList;
 
 -(NSUInteger) countOfList;
 
--(void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore;
+//-(void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore;
+- (id)initWithSkillTree: (SkillTree *)skillTree;
 
--(SkillTree *)objectInListAtIndex:(NSUInteger)theIndex;
+-(NSString *)objectInListAtIndex:(NSUInteger)theIndex;
 
 @end

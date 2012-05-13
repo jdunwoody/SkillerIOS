@@ -14,5 +14,5 @@
 @property (nonatomic, assign) NSString *status;
 
 - (id)initWithName: (NSString *)name description:(NSString *)description status:(NSString *) status;
-
+- (void)dump;
 @end

@@ -24,4 +24,7 @@
     return self;
 }
 
+-(void) dump {
+    NSLog(@"Task: %@", _name);
+}
 @end

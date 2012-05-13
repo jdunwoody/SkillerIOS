@@ -16,9 +16,17 @@
     if (self) {
         _name = name;
         _score = score;
+        _tasks = [[NSMutableArray alloc]init];
+        
         return self;
     }
     return self;
 }
 
+- (void)dump {
+    NSLog(@"Level: %@", _name);
+    for(Task *task in _tasks) {
+        [task dump];
+    }
+}
 @end
