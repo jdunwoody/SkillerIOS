@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ViewableInTable.h"
 
-@interface Task : NSObject
+@interface Task : NSObject<ViewableInTable>
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
 @property (nonatomic, assign) NSString *status;
 
 - (id)initWithName: (NSString *)name description:(NSString *)description status:(NSString *) status;
 - (void)dump;
+- (NSString *)dataForTable;
 @end

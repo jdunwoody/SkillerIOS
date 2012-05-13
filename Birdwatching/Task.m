@@ -27,4 +27,9 @@
 -(void) dump {
     NSLog(@"Task: %@", _name);
 }
+
+- (NSString *)dataForTable {
+    return [NSString stringWithFormat:@"Task: %@", _name];
+}
+
 @end

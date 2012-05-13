@@ -20,12 +20,10 @@
     NSMutableArray *skillTreeList = [[NSMutableArray alloc] init];
     self.masterSkillTreeList = skillTreeList;
     
-    // not in code listing
     NSArray *skillTrees = [self getJsonFromServer];
     
     for (id skillTree in skillTrees) {
         [self.masterSkillTreeList addObject:skillTree];
-//        [self addSkillTreeWithName:[skillTree name] score:[skillTree score]];
     }
  }
 
@@ -39,15 +37,10 @@
     return [self.masterSkillTreeList count];
 }
 
-- (SkillTree *)objectInListAtIndex:(NSUInteger)theIndex {
+- (id <ViewableInTable>)objectInListAtIndex:(NSUInteger)theIndex {
     return [self.masterSkillTreeList objectAtIndex:theIndex];
 }
 
-//- (void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore {
-//    NSDate *today = [NSDate date];
-//    SkillTree *skillTree = [[SkillTree alloc] initWithName:inputName score:inputScore date:today];
-//    [self.masterSkillTreeList addObject:skillTree];
-//}
 
 #define url [NSURL URLWithString: @"http://glowing-sunset-9969.herokuapp.com/skill_trees/everything.json"] 
 // not in code listing

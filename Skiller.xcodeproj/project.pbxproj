@@ -35,6 +35,7 @@
 		1ABB0E8015345E440048034E /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		1ABB0E8315345F140048034E /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		1ABB0E8415345F140048034E /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		1AD3DC6E155FDBC400BBB4BB /* ViewableInTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewableInTable.h; sourceTree = "<group>"; };
 		1AF8024B15281CC1007A9766 /* Skiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF8024F15281CC1007A9766 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AF8025115281CC1007A9766 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +119,7 @@
 				1AF8027915286B80007A9766 /* SkillTreeDataController.m */,
 				1A54D45F1543D93C00337F52 /* TaskDataController.h */,
 				1A54D4601543D93C00337F52 /* TaskDataController.m */,
+				1AD3DC6E155FDBC400BBB4BB /* ViewableInTable.h */,
 			);
 			path = Birdwatching;
 			sourceTree = "<group>";

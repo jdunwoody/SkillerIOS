@@ -24,6 +24,10 @@
     return self;
 }
 
+- (NSString *)dataForTable {
+    return [NSString stringWithFormat:@"SkillTree: %@", _name];
+}
+
 -(void) dump {
     NSLog(@"SkillTree: %@", _name);
     for (Level *level in _levels) {

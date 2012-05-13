@@ -5,8 +5,9 @@
 
 #import <Foundation/Foundation.h>
 #import "level.h"
+#import "ViewableInTable.h"
 
-@interface SkillTree : NSObject
+@interface SkillTree : NSObject<ViewableInTable>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSNumber *score;
@@ -15,4 +16,5 @@
 
 - (id)initWithName: (NSString *)name score:(NSNumber *)score date:(NSDate *)date;
 - (void)dump;
+- (NSString *)dataForTable;
 @end

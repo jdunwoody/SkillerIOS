@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Task.h"
+#import "ViewableInTable.h"
 
-@interface Level : NSObject
+@interface Level : NSObject<ViewableInTable>
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSNumber *score;
 @property (readwrite, retain) NSMutableArray *tasks;
 
 - (id)initWithName: (NSString *)name score:(NSNumber *)score;
 - (void)dump;
+- (NSString *)dataForTable;
 @end

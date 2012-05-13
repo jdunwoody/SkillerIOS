@@ -1,11 +1,12 @@
 #import "TaskDetailViewController.h"
 #import "TaskDataController.h"
 #import "SkillTree.h"
+#import "ViewableInTable.h"
 
-//@interface BirdsMasterViewController () {
-//NSMutableArray *_objects;
-//}
-//@end
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation TaskDetailViewController
 
@@ -16,27 +17,8 @@
 {
     if (_skillTree != newSkillTree) {
         _skillTree = newSkillTree;
-        
-//        [self configureView];
     }
 }
-
-//- (void)configureView
-//{
-//    SkillTree *theSkillTree = self.skillTree;
-//    
-//    static NSDateFormatter *formatter = nil;
-//    if (formatter == nil) {
-//        formatter = [[NSDateFormatter alloc] init];
-//        [formatter setDateStyle:NSDateFormatterMediumStyle];
-//    }
-//    
-//    if (theSkillTree) {
-////        self.nameLabel.text = theSkillTree.name;
-////        self.scoreLabel.text = [NSString stringWithFormat:@"%d", [theSkillTree.score intValue]];
-////        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theSkillTree.date];
-//    }
-//}
 
 - (void)awakeFromNib
 {
@@ -64,17 +46,6 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-/*
-- (void)insertNewObject:(id)sender
-{
- if (!_objects) {
- _objects = [[NSMutableArray alloc] init];
- }
- [_objects insertObject:[NSDate date] atIndex:0];
- NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
- [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
- }
-*/
 
 #pragma mark - Table View
 
@@ -100,16 +71,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    NSString *valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    id <ViewableInTable> valueAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
 
-    [[cell textLabel] setText:valueAtIndex];
-//    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) _skillTree.date]];
-    return cell;
+    [[cell textLabel] setText:[valueAtIndex dataForTable]];
     
-//    SkillTree *skillTreeAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-//    [[cell textLabel] setText:skillTreeAtIndex.name];
-//    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) skillTreeAtIndex.date]];
-//    return cell;
+    if ([valueAtIndex isMemberOfClass:[SkillTree class]]) {
+        [[cell textLabel] setTextColor:UIColorFromRGB(0xFF0000)];
+    } else if ([valueAtIndex isMemberOfClass:[Level class]]) {
+        [[cell textLabel] setTextColor:UIColorFromRGB(0x00FF00)];
+    } else {
+        [[cell textLabel] setTextColor:UIColorFromRGB(0x0000FF)];
+    }
+    return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,33 +91,6 @@
     return NO;
 }
 
-/*
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- [_objects removeObjectAtIndex:indexPath.row];
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
- }
- }*/
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-//
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"BLAH"]) {

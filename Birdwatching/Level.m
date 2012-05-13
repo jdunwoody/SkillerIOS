@@ -29,4 +29,9 @@
         [task dump];
     }
 }
+
+- (NSString *)dataForTable {
+    return [NSString stringWithFormat:@"Level: %@", _name];
+}
+
 @end

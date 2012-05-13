@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "ViewableInTable.h"
 
 @class SkillTree;
 
@@ -8,8 +9,6 @@
 
 -(NSUInteger) countOfList;
 
-//-(void)addSkillTreeWithName:(NSString *)inputName score:(NSNumber *)inputScore;
-
--(SkillTree *)objectInListAtIndex:(NSUInteger)theIndex;
+-(id <ViewableInTable>)objectInListAtIndex:(NSUInteger)theIndex;
 
 @end

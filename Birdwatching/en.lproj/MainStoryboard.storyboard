@@ -119,6 +119,14 @@
             <point key="canvasLocation" x="951" y="64"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="SkillerMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillerMasterViewController.h"/>
+        </class>
+        <class className="TaskDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskDetailViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
