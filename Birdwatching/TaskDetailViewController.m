@@ -82,8 +82,47 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     } else {
         [[cell textLabel] setTextColor:UIColorFromRGB(0x0000FF)];
     }
+    
+    UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+    cell.accessoryView = switchView;
+    [switchView setOn:[self readCellStatus] animated:NO];
+    [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+                
     return cell;
 }
+
+- (BOOL) readCellStatus
+{
+    return NO;
+}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+////    switch( [indexPath row] ) {
+////        case MY_SWITCH_CELL: {
+//            UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell"];
+//            if( aCell == nil ) {
+//                aCell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"TaskCell"];
+//                aCell.textLabel.text = @"I Have A Switch";
+//                aCell.selectionStyle = UITableViewCellSelectionStyleNone;
+//                UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+//                aCell.accessoryView = switchView;
+//                [switchView setOn:NO animated:NO];
+//                [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+//            }
+//            return aCell;
+////        }
+////        break;
+////    }
+////    return nil;
+//}
+
+- (void) switchChanged:(id)sender {
+    UISwitch* switchControl = sender;
+    NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
+}
+
+
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
