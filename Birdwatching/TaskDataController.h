@@ -2,6 +2,7 @@
 #import "ViewableInTable.h"
 
 @class SkillTree;
+@class Task;
 
 @interface TaskDataController : NSObject
 
@@ -13,4 +14,5 @@
 
 -(id <ViewableInTable>)objectInListAtIndex:(NSUInteger)theIndex;
 
+- (BOOL) updateStatus:(NSUInteger) theIndex;
 @end

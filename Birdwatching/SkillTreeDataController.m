@@ -41,7 +41,6 @@
     return [self.masterSkillTreeList objectAtIndex:theIndex];
 }
 
-
 #define url [NSURL URLWithString: @"http://glowing-sunset-9969.herokuapp.com/skill_trees/everything.json"] 
 // not in code listing
 - (NSArray *)getJsonFromServer {
@@ -70,9 +69,10 @@
             [[skillTree levels] addObject:level];
             
             for (id taskJson in [levelJson objectForKey:@"tasks"]) {
-//                NSString *status = [taskJson objectForKey:@"status"];
+                NSNumber *status = [taskJson objectForKey:@"status"];
+                NSLog(@"status is %@", status);
                 
-                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:@"ok"];
+                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:([status intValue] == 1)];
                 [[level tasks] addObject:task];
                 
             }

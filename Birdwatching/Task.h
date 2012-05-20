@@ -12,9 +12,9 @@
 @interface Task : NSObject<ViewableInTable>
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
-@property (nonatomic, assign) NSString *status;
+@property (nonatomic, assign) BOOL status;
 
-- (id)initWithName: (NSString *)name description:(NSString *)description status:(NSString *) status;
+- (id)initWithName: (NSString *)name description:(NSString *)description status:(BOOL) status;
 - (void)dump;
 - (NSString *)dataForTable;
 @end

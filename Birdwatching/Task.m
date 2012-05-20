@@ -13,7 +13,7 @@
 @synthesize description = _description;
 @synthesize status = _status;
 
--(id) initWithName:(NSString *)name description:(NSString *)description status:(NSString *)status {
+-(id) initWithName:(NSString *)name description:(NSString *)description status:(BOOL) status {
     self = [super init];
     if (self) {
         _name = name;

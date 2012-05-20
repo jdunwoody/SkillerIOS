@@ -80,21 +80,23 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     } else if ([valueAtIndex isMemberOfClass:[Level class]]) {
         [[cell textLabel] setTextColor:UIColorFromRGB(0x00FF00)];
     } else {
+        Task *task = (Task *)valueAtIndex;
         [[cell textLabel] setTextColor:UIColorFromRGB(0x0000FF)];
+    
+        UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+        cell.accessoryView = switchView;
+        [switchView setOn:task.status animated:NO];
+        [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+        switchView.tag = indexPath.row;
     }
     
-    UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
-    cell.accessoryView = switchView;
-    [switchView setOn:[self readCellStatus] animated:NO];
-    [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-                
     return cell;
 }
 
-- (BOOL) readCellStatus
-{
-    return NO;
-}
+//- (BOOL) readCellStatus
+//{
+//    return [self.dataController updateStatus];
+//}
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 ////    switch( [indexPath row] ) {
@@ -119,6 +121,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void) switchChanged:(id)sender {
     UISwitch* switchControl = sender;
     NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
+    BOOL status = [self.dataController updateStatus:switchControl.tag];
 }
 
 
