@@ -72,7 +72,7 @@
                 NSNumber *status = [taskJson objectForKey:@"status"];
                 NSLog(@"status is %@", status);
                 
-                Task *task = [[Task alloc] initWithName:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:([status intValue] == 1)];
+                Task *task = [[Task alloc] initWithTaskId:[taskJson objectForKey:@"id"] name:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:([status intValue] == 1)];
                 [[level tasks] addObject:task];
                 
             }

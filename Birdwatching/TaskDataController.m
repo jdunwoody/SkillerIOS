@@ -44,8 +44,13 @@
 
 - (BOOL) updateStatus:(NSUInteger) theIndex
 {
-    NSString *jsonstring=@"http://glowing-sunset-9969.herokuapp.com/tasks/4/toggle_complete.json"; 
-    NSString *urlString = [NSString stringWithFormat:@"%@",jsonstring];
+    Task *task = (Task *)[self objectInListAtIndex:theIndex];
+    
+//     [NSString stringWithFormat:@"%d", [theSkillTree.score intValue]];
+    NSString *jsonString=[NSString stringWithFormat:@"http://glowing-sunset-9969.herokuapp.com/tasks/%@/toggle_complete.json", task.taskId]; 
+    NSLog(@"Acessing update status url = %@", jsonString);
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@",jsonString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"PUT"]; 
@@ -61,7 +66,6 @@
     NSLog(@"%@",returnString);
     BOOL newStatus = [returnString boolValue];
     
-    Task *task = (Task *)[self objectInListAtIndex:theIndex];
     task.status = newStatus;
     return YES;
 //    [returnString boolValue];

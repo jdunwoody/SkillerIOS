@@ -10,11 +10,12 @@
 #import "ViewableInTable.h"
 
 @interface Task : NSObject<ViewableInTable>
+@property (nonatomic, copy) NSString *taskId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
 @property (nonatomic, assign) BOOL status;
 
-- (id)initWithName: (NSString *)name description:(NSString *)description status:(BOOL) status;
+- (id)initWithTaskId:(NSString *)taskId name:(NSString *)name description:(NSString *)description status:(BOOL) status;
 - (void)dump;
 - (NSString *)dataForTable;
 @end
