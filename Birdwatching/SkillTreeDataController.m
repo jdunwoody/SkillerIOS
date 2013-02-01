@@ -42,7 +42,7 @@
 }
 
 #define url [NSURL URLWithString: @"http://glowing-sunset-9969.herokuapp.com/skill_trees/everything.json"] 
-// not in code listing
+
 - (NSArray *)getJsonFromServer {
     NSMutableArray *skillTrees = [[NSMutableArray alloc] init];
     

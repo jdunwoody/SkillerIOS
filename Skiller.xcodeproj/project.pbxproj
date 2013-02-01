@@ -12,6 +12,7 @@
 		1A54D4611543D93C00337F52 /* TaskDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54D4601543D93C00337F52 /* TaskDataController.m */; };
 		1ABB0E8115345E440048034E /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABB0E8015345E440048034E /* Level.m */; };
 		1ABB0E8515345F140048034E /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABB0E8415345F140048034E /* Task.m */; };
+		1ADE90D115849E5E005B0AF1 /* ExerciseRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE90D015849E5E005B0AF1 /* ExerciseRowCell.m */; };
 		1AF8025015281CC1007A9766 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8024F15281CC1007A9766 /* UIKit.framework */; };
 		1AF8025215281CC1007A9766 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025115281CC1007A9766 /* Foundation.framework */; };
 		1AF8025415281CC1007A9766 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF8025315281CC1007A9766 /* CoreGraphics.framework */; };
@@ -36,6 +37,8 @@
 		1ABB0E8315345F140048034E /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		1ABB0E8415345F140048034E /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		1AD3DC6E155FDBC400BBB4BB /* ViewableInTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewableInTable.h; sourceTree = "<group>"; };
+		1ADE90CF15849E5E005B0AF1 /* ExerciseRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseRowCell.h; sourceTree = "<group>"; };
+		1ADE90D015849E5E005B0AF1 /* ExerciseRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseRowCell.m; sourceTree = "<group>"; };
 		1AF8024B15281CC1007A9766 /* Skiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF8024F15281CC1007A9766 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AF8025115281CC1007A9766 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				1A54D45F1543D93C00337F52 /* TaskDataController.h */,
 				1A54D4601543D93C00337F52 /* TaskDataController.m */,
 				1AD3DC6E155FDBC400BBB4BB /* ViewableInTable.h */,
+				1ADE90CF15849E5E005B0AF1 /* ExerciseRowCell.h */,
+				1ADE90D015849E5E005B0AF1 /* ExerciseRowCell.m */,
 			);
 			path = Birdwatching;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				1A54D45D1543B3C500337F52 /* TaskDetailViewController.m in Sources */,
 				1A54D4611543D93C00337F52 /* TaskDataController.m in Sources */,
 				1A42CAE7155D3B6B00FFAE85 /* SkillerDetailViewController.m in Sources */,
+				1ADE90D115849E5E005B0AF1 /* ExerciseRowCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
